@@ -1,0 +1,197 @@
+:root {
+--salvia: #7A9E7E;
+--salvia-escura: #3F5E45;
+--salvia-clara: #E4ECE4;
+--creme: #FAF7F2;
+--grafite: #2B2B2B;
+--grafite-suave: #5A5A5A;
+--coral: #B84A32;
+--coral-escuro: #9A3B27;
+--borda: #DDD6CB;
+}
+
+* {
+box-sizing: border-box;
+}
+
+body {
+min-height: 100vh;
+margin: 0;
+display: flex;
+flex-direction: column;
+font-family: Georgia, 'Times New Roman', serif;
+color: var(--grafite);
+background-color: var(--creme);
+}
+
+header {
+text-align: center;
+padding: 36px 20px;
+margin-bottom: 28px;
+background-color: var(--salvia-escura);
+color: #fff;
+}
+
+header h1 {
+margin: 4px 0 0;
+font-size: 2.4rem;
+letter-spacing: 1px;
+}
+
+header p {
+margin: 0;
+color: var(--salvia-clara);
+font-style: italic;
+}
+
+main {
+flex: 1;
+width: 100%;
+max-width: 1100px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+form {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 10px;
+margin-bottom: 28px;
+}
+
+form input {
+width: 260px;
+padding: 9px 12px;
+font: inherit;
+color: var(--grafite);
+border: 1px solid var(--salvia);
+border-radius: 4px;
+background: #fff;
+}
+
+form button {
+padding: 9px 20px;
+font: inherit;
+color: #fff;
+background: var(--salvia-escura);
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+form button:hover {
+background: #2F4834;
+}
+
+form input:focus-visible,
+form button:focus-visible,
+.btn-comprar:focus-visible {
+outline: 3px solid var(--salvia-escura);
+outline-offset: 2px;
+}
+
+.catalogo {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+gap: 18px;
+padding-bottom: 32px;
+}
+
+.div-card {
+display: flex;
+flex-direction: column;
+overflow: hidden;
+background: #fff;
+border: 1px solid var(--borda);
+border-radius: 6px;
+}
+
+.div-imagem {
+aspect-ratio: 4 / 3;
+background: var(--salvia-clara);
+}
+
+.div-imagem img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.card-corpo {
+display: flex;
+flex: 1;
+flex-direction: column;
+padding: 14px 16px 16px;
+}
+
+.div-card h3 {
+margin: 0 0 8px;
+font-size: 1.05rem;
+line-height: 1.3;
+}
+
+.p-descricao {
+margin: 0 0 14px;
+font-size: 0.9rem;
+line-height: 1.5;
+color: var(--grafite-suave);
+}
+
+.span-categoria {
+align-self: flex-start;
+margin-top: auto;
+margin-bottom: 10px;
+padding: 2px 8px;
+font-size: 0.8rem;
+color: var(--salvia-escura);
+background: var(--salvia-clara);
+border-radius: 3px;
+}
+
+.card-rodape {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 10px;
+}
+
+.span-preco {
+font-size: 1.15rem;
+font-weight: bold;
+}
+
+.btn-comprar {
+padding: 8px 16px;
+font: inherit;
+font-size: 0.9rem;
+color: #fff;
+background: var(--coral);
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.btn-comprar:hover {
+background: var(--coral-escuro);
+}
+
+.filtro-erro {
+grid-column: 1 / -1;
+text-align: center;
+color: var(--grafite-suave);
+}
+
+footer {
+text-align: center;
+padding: 14px;
+background-color: var(--salvia-escura);
+color: var(--salvia-clara);
+font-size: 0.9rem;
+}
+
+footer p {
+margin: 0;
+}
